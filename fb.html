@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://www.iapps.im/bird/level-1.html -->
+<html lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <title>flappy bird learning</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      
+      <!-- Style sheets -->
+      <link href="./fb_files/reset.css" rel="stylesheet">
+      <link href="./fb_files/main.css" rel="stylesheet">
+
+      <style type="text/css">
+      #gamecontainer { height: 85%; }
+      #fb_footer { margin: 15px 15px 0; }
+      #fb_footer p { line-height: 1.5em; }
+      #fb_footer .created_by { color: #666666; }
+      </style>
+
+      <script type="text/javascript">
+      var gravity = 0.25;
+      var velocity = 0;
+      var position = 180;
+      var rotation = 0;
+      var jump = -4.6;
+
+      var pipeheight = 120;
+      var pipewidth = 52;
+      </script>
+   <script src="./fb_files/share.js"></script></head>
+   <body>
+      <div id="gamecontainer">
+         <div id="gamescreen">
+            <div id="sky" class="animated" style="animation-play-state: running;">
+               <div id="flyarea">
+                  <div id="ceiling" class="animated" style="animation-play-state: running;"></div>
+                  <!-- This is the flying and pipe area container -->
+                  <div id="player" class="bird animated" style="transform: translate(0px, 0px) rotate(0deg); top: 180px; animation-play-state: running;"></div>
+                  
+                  <div id="bigscore"></div>
+                  
+                  <div id="splash" style="opacity: 1;"></div>
+                  
+                  <div id="scoreboard">
+                     <div id="medal"><img src="./fb_files/medal_gold.png" alt="gold"></div>
+                     <div id="currentscore"><img src="./fb_files/font_small_1.png" alt="1"><img src="./fb_files/font_small_1.png" alt="1"></div>
+                     <div id="highscore"><img src="./fb_files/font_small_9.png" alt="9"><img src="./fb_files/font_small_9.png" alt="9"></div>
+                     <div id="replay"><img src="./fb_files/replay.png" alt="replay"></div>
+                  </div>
+                  
+                  <!-- Pipes go here! -->
+               </div>
+            </div>
+            <div id="land" class="animated" style="animation-play-state: running;"><div id="debug"></div></div>
+         </div>
+      </div>
+   <div class="boundingbox" id="playerbox"></div>
+   <div class="boundingbox" id="pipebox"></div>
+   
+   <script src="./fb_files/jquery.min.js"></script>
+   <script src="./fb_files/jquery.transit.min.js"></script>
+   <script src="./fb_files/buzz.min.js"></script>
+   <script src="./fb_files/main2.js"></script>
+   
+</body>
+</html>
